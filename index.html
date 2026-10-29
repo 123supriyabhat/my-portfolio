@@ -169,18 +169,27 @@
         Feel free to reach out!
     </p>
 
- <div class="contact-card">
+<div class="contact-card">
   <h3>Get in Touch 💌</h3>
   <p>Let's connect and grow together.</p>
 
-  <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=bhatsupriya145@gmail.com"
-     target="_blank"
-     rel="noopener noreferrer"
+  <a href="mailto:bhatsupriya145@gmail.com?subject=Portfolio%20Inquiry"
+     id="emailBtn"
      class="btn">
     ✉ Email Me
   </a>
 </div>
 
+<script>
+  const btn = document.getElementById("emailBtn");
+  const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
+
+  if (!isMobile) {
+    btn.href = "https://mail.google.com/mail/?view=cm&fs=1&to=bhatsupriya145@gmail.com&su=Portfolio%20Inquiry";
+    btn.target = "_blank";
+    btn.rel = "noopener noreferrer";
+  }
+</script>
 <footer>
     <p>© 2026 Supriya Bhat | Built with ❤️ and code</p>
     <p class="footer-text">Learning • Growing • Creating</p>
